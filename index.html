@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+
+	<title>Stemwijzer</title>
+</head>
+<body>
+	<div id='container' class='container'>
+		<div class="row">
+			<div id='main' class="col-md-12 mt-5 p-5 text-center main txtCenter">
+				<div class="paddingT">
+					<button id='done' class="results">To results</button>
+
+					<button id='restart' class="again">Make again</button>
+				</div>
+				<h2 id='title' class="txtCenter">Stemwijzer</h2>
+				<h5 id='statement'></h5>
+
+				<button id='start' class="start">Start</button>
+				<button id='previous' class="previous">Previous</button>
+
+				<button id='vote_btn_pro' class='agree'>Agree</button>
+				<button id='vote_btn_contra' class='disagree'>Disagree</button>
+				<button id='none' class='none'>None</button>
+				<button id='skip' class='skip'>Skip</button>
+
+				<button id='opinion' class="opinion">Opinions</button>
+				<button id='b_parties' class="b_parties">Big Parties</button>
+				<button id='s_parties' class="s_parties">Secular Parties</button>
+
+				<div id='opinion'></div>
+				<div class="fontS backgroundW">
+					<div id='weighted_questions' class="cursorP border marginL"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Scripts -->
+	<script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

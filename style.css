@@ -1,0 +1,56 @@
+body {
+	background-image: url('background.jpg');
+	background-repeat: repeat-y;
+	background-size: 1920px 950px;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+	margin: 			0 auto;
+	width: 				800px;
+	height: 			150px;
+	margin-top: 		200px;
+}
+
+.main {
+	height: 250px;
+	background-color: 	white;
+}
+
+.selected {
+	color: 				red;
+}
+
+.txtCenter {
+	text-align: 		center;
+}
+
+.fontS {
+	font-size: 			20px;
+}
+
+.marginL {
+	margin-left: 		235px;
+}
+
+/* padding is added on the top with 50px */
+.paddingT {
+	padding-top: 		50px;
+}
+
+/* background color white if class = backgroundW*/
+.backgroundW {
+	background-color: 	white;
+}
+
+/* cursor becomes a pointer if class = cursorP  */
+.cursorP {
+	cursor: 			pointer;
+}
+
+/* border sets  */
+.border {
+	width: 				350px;
+	border-width: 		3px;
+	border-style: 		solid;
+}
