@@ -236,9 +236,9 @@ let Stemwijzer = (function(){
 	    let names = Object.values(sorted_keys);
 
 	    for(i = 0; i < Object.keys(sorted_keys).length; i++){
-	        let party_name = document.createElement('h5');
-	        party_name.innerHTML = (i+1) + '. ' + names[i];
-	        main.appendChild(party_name);
+	        let party = document.createElement('h3');
+	        party.innerHTML = (i+1) + '. ' + names[i];
+	        main.appendChild(party);
 	    }
 	}
 

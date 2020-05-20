@@ -54,3 +54,7 @@ body {
 	border-width: 		3px;
 	border-style: 		solid;
 }
+
+.main {
+	background-color: white;
+}
