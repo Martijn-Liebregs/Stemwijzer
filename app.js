@@ -1,4 +1,4 @@
-let Stemwijzer = (function(){
+let Stemwijzer = function(){
 
 	// Some variables
 	let question = 0;
@@ -57,7 +57,7 @@ let Stemwijzer = (function(){
 			party_vote_count[parties[i].name] = 0;
 		}
 		// Call functions
-		loadQuestion(question);/
+		loadQuestion(question);
 	};
 
 	prev_btn.onclick = () => {
@@ -239,4 +239,4 @@ let Stemwijzer = (function(){
 	    }
 	}
 
-})();
+}();
