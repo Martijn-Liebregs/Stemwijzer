@@ -23,8 +23,9 @@ let Stemwijzer = function(){
 	let restart_btn = document.getElementById('restart')
 	// Get elements by id
 	let show_opinion = document.getElementById('opinion');
-	let show_big_parties = document.getElementById('b_parties');
-	let show_secular_parties = document.getElementById('s_parties');
+	let show_big_parties = document.getElementById('bigParties');
+	let show_secular_parties = document.getElementById('smallParties');
+	let results_div = document.getElementById('results');
 
 	// Set element displays
 	vote_btn_pro.style.display = 'none';
@@ -150,7 +151,7 @@ let Stemwijzer = function(){
 		vote('none');
 	});
 	vote_btn_skip.addEventListener('click', function(){
-		vote('');
+		vote('s');
 	});
 
 	function loadQuestion(q){
@@ -169,7 +170,6 @@ let Stemwijzer = function(){
 			vote_btn_none.style.display = 'none';
 			vote_btn_skip.style.display = 'none';
 			prev_btn.style.display = 'none';
-			show_opinion.style.display = 'none';
 			show_big_parties.style.display = 'none';
 			show_secular_parties.style.display = 'none';
 			done_btn.style.display = 'inline-block';
