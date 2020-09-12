@@ -10,7 +10,6 @@ let Stemwijzer = function(){
 	let main = document.getElementById('main');
 	let title_div = document.getElementById('title');
 	let statement_div = document.getElementById('statement');
-	let opinion_div = document.getElementById('opinion');
 	let weighted_div = document.getElementById('weighted_questions');
 	// Get elements by id
 	let start_btn = document.getElementById('start');
@@ -36,7 +35,6 @@ let Stemwijzer = function(){
 	show_opinion.style.display = 'none';
 	show_big_parties.style.display = 'none';
 	show_secular_parties.style.display = 'none';
-	opinion_div.style.display = 'none';
 	done_btn.style.display = 'none';
 	weighted_div.style.display = 'none';
 	restart_btn.style.display = 'none';
