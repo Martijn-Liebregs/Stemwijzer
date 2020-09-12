@@ -1,7 +1,7 @@
 let Stemwijzer = function(){
 
 	// Some variables
-	let question = 0;
+	let question = 30;
 	let party_vote_count = {};
 	let votes = [];
 	let weighted_questions = [];
@@ -33,7 +33,6 @@ let Stemwijzer = function(){
 	vote_btn_none.style.display = 'none';
 	vote_btn_skip.style.display = 'none';
 	prev_btn.style.display = 'none';
-	show_opinion.style.display = 'none';
 	show_big_parties.style.display = 'none';
 	show_secular_parties.style.display = 'none';
 	done_btn.style.display = 'none';
@@ -49,7 +48,6 @@ let Stemwijzer = function(){
 		vote_btn_none.style.display = 'inline-block';
 		vote_btn_skip.style.display = 'inline-block';
 		prev_btn.style.display = 'inline-block';
-		show_opinion.style.display = 'inline-block';
 
 		// Fill party votes
 		for(let i = 0; i < parties.length; i++){
@@ -75,7 +73,6 @@ let Stemwijzer = function(){
 			let name = document.createElement('h2');
 			let vote = document.createElement('h5');
 			let opinion = document.createElement('p');
-			let streep = document.createElement('hr');
 
 			name.innerHTML = subjects[question]['parties'][i].name;
 			opinion.innerHTML = subjects[question]['parties'][i].opinion;
@@ -91,10 +88,8 @@ let Stemwijzer = function(){
 					translated = 'Oneens';
 					break;
 				case 'none':
-					translated = 'Geen van bijde';
+					translated = 'Niks';
 					break;
-				default:
-					translated = 'wtf';
 			}
 
 			vote.innerHTML 	= translated;
@@ -102,7 +97,6 @@ let Stemwijzer = function(){
 			opinion_div.appendChild(name);
 			opinion_div.appendChild(vote);
 			opinion_div.appendChild(opinion);
-			opinion_div.appendChild(streep);
 		}
 
 		// Toggle display
@@ -233,7 +227,7 @@ let Stemwijzer = function(){
 	    for(i = 0; i < Object.keys(sorted_keys).length; i++){
 	        let party = document.createElement('h3');
 	        party.innerHTML = (i+1) + '. ' + names[i];
-	        main.appendChild(party);
+	        results_div.appendChild(party);
 	    }
 	}
 

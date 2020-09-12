@@ -55,6 +55,11 @@ body {
 	border-style: 		solid;
 }
 
-.main {
+#results {
 	background-color: white;
+	padding-bottom: 50px;
+}
+
+.red {
+	color: red;
 }
