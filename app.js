@@ -1,7 +1,7 @@
 let Stemwijzer = function(){
 
 	// Some variables
-	let question = 30;
+	let question = 25;
 	let party_vote_count = {};
 	let votes = [];
 	let weighted_questions = [];
@@ -150,10 +150,22 @@ let Stemwijzer = function(){
 
 	function loadQuestion(q){
 		if(q < subjects.length){
-			// Load new question
-			title_div.innerHTML = (question+1) + '. ' + subjects[q]['title'];
-			statement_div.innerHTML = '"'+subjects[q]['statement']+'"';
-		}
+            // Load new question
+            let buttons = document.querySelectorAll("button[data-vote]");
+
+            for(let i = 0; i < buttons.length; i++) {
+                buttons[i].classList.remove("red");
+            }
+
+            title_div.innerHTML = (question+1) + '. ' + subjects[q]['title'];
+            statement_div.innerHTML = '"'+subjects[q]['statement']+'"';
+            if (votes[q] != undefined) {
+
+                let voted = document.querySelectorAll("button[data-vote='"+votes[q]+"']")[0];
+                voted.classList.add("red");
+            }
+        }
+
 		else {
 			// End of questions
 			title_div.innerHTML = 'Kies de vragen die zwaar moeten mee tellen.';
