@@ -1,7 +1,7 @@
 let Stemwijzer = function(){
 
 	// Some variables
-	let question = 25;
+	let question = 30;
 	let party_vote_count = {};
 	let votes = [];
 	let weighted_questions = [];
@@ -20,11 +20,11 @@ let Stemwijzer = function(){
 	// Get elements by id
 	let prev_btn = document.getElementById('previous');
 	let done_btn = document.getElementById('done');
-	let restart_btn = document.getElementById('restart')
+	let restart_btn = document.getElementById('restart');
 	// Get elements by id
 	let show_opinion = document.getElementById('opinion');
 	let show_big_parties = document.getElementById('bigParties');
-	let show_secular_parties = document.getElementById('smallParties');
+	let show_secular_parties = document.getElementById('secularParties');
 	let results_div = document.getElementById('results');
 
 	// Set element displays
@@ -154,7 +154,7 @@ let Stemwijzer = function(){
             let buttons = document.querySelectorAll("button[data-vote]");
 
             for(let i = 0; i < buttons.length; i++) {
-                buttons[i].classList.remove("red");
+                buttons[i].classList.remove("selected");
             }
 
             title_div.innerHTML = (question+1) + '. ' + subjects[q]['title'];
@@ -162,7 +162,7 @@ let Stemwijzer = function(){
             if (votes[q] != undefined) {
 
                 let voted = document.querySelectorAll("button[data-vote='"+votes[q]+"']")[0];
-                voted.classList.add("red");
+                voted.classList.add("selected");
             }
         }
 
@@ -199,12 +199,18 @@ let Stemwijzer = function(){
 		for(let i = 0; i < subjects.length; i++){
 
 			let q = document.createElement('h5');
-
+			
 			// Set attributes
 			q.id 		= i;
 			q.innerHTML = subjects[i].title;
 
 			weighted_div.appendChild(q);
+
+			if (i != subjects.length -1) { 
+				let r = document.createElement("span");
+				r.innerHTML = "&nbsp&nbsp|&nbsp&nbsp";
+				weighted_div.appendChild(r);
+			}
 
 			// Onclick event
 			q.onclick = (e) => {
@@ -228,6 +234,9 @@ let Stemwijzer = function(){
 		// Set display
 		weighted_div.style.display = 'none';
 		done_btn.style.display = 'none';
+
+		show_big_parties.style.display = 'inline-block';
+		show_secular_parties.style.display = 'inline-block';
 		restart_btn.style.display = 'inline-block';
 
 		title_div.innerHTML = 'Uw resultaat:';

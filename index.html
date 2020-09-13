@@ -5,42 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- CSS -->
-	<link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style.css">
 
 	<title>Stemwijzer</title>
 </head>
 <body>
 	<div id='container' class='container'>
-		<div class="row">
-			<div id='main' class="col-md-12 mt-5 p-5 text-center main txtCenter">
+		<div id='main' class="text-center main txtCenter">
+			<div class="header">
+				<button id='done' class="results">Zie resultaten</button>
 
-				<div class="paddingT">
-					<button id='done' class="results">To results</button>
+				<button id='bigParties' class="w3-button w3-white w3-border b_parties">Grote Partijen</button>
+				<button id='restart' class="w3-button w3-white w3-border again">Maak opnieuw</button>
+				<button id='secularParties' class="w3-button w3-white w3-border s_parties">Seculiere Partijen</button>
 
-					<button id='restart' class="again">Make again</button>
-				</div>
-
-				<h2 id='title' class="txtCenter">Stemwijzer</h2>
-				<h4 id='statement'></h5>
-
-				<button id='start' class="start">Start</button>
-				<button id='previous' class="previous">Previous</button>
-
-				<button id='vote_btn_pro' data-vote='pro'>Mee eens</button>
-				<button id='vote_btn_contra' data-vote='contra'>Oneens</button>
-				<button id='none' data-vote='none'>Niks</button>
-				<button id='skip' data-vote='skip'>Overslaan</button>
-
-				<button id='bigParties' class="b_parties">Big Parties</button>
-				<button id='smallParties' class="s_parties">Secular Parties</button>
-
-				<div id='opinion'></div>
-				<div id='party' class="fontS backgroundW">
-					<div id='weighted_questions' class="cursorP border marginL"></div>
-				</div>
-				<div id='results'></div>
 			</div>
+			<h2 id='title' class="txtCenter">Stemwijzer</h2>
+			<h4 id='statement'></h5>
+
+			<button id='start' class="start">Begin</button>
+			<button id='previous' class="previous">Vorige</button>
+
+			<button id='vote_btn_pro' data-vote='pro'>Mee eens</button>
+			<button id='vote_btn_contra' data-vote='contra'>Oneens</button>
+			<button id='none' data-vote='none'>Niks</button>
+			<button id='skip' data-vote='skip'>Overslaan</button>
+
+			<div id='opinion'></div>
+
+			<div id='party' class="party">
+				<div id='weighted_questions' class="weighted"></div>
+			</div>
+
+			<div id='results'></div>
 		</div>
 	</div>
 

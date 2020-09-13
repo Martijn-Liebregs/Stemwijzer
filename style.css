@@ -1,8 +1,16 @@
 body {
-	background-image: url('background.jpg');
-	background-repeat: repeat-y;
-	background-size: 1920px 950px;
-	font-family: 'Montserrat', sans-serif;
+	background-color: 	rgb(20, 20, 20);
+    background-image: 	url(background.png);
+	background-repeat: 	repeat-y;
+	background-size: 	1920px 950px;
+	font-family: 		'Montserrat', sans-serif;
+	color: 				white;
+}
+
+h5, span {
+	font-size: 			22px;
+	line-height: 		15px;
+	display: 			inline-block;
 }
 
 .container {
@@ -14,7 +22,6 @@ body {
 
 .main {
 	height: 250px;
-	background-color: 	white;
 }
 
 .selected {
@@ -25,41 +32,19 @@ body {
 	text-align: 		center;
 }
 
-.fontS {
-	font-size: 			20px;
-}
-
-.marginL {
-	margin-left: 		235px;
-}
-
-/* padding is added on the top with 50px */
-.paddingT {
+.header {
 	padding-top: 		50px;
 }
 
-/* background color white if class = backgroundW*/
-.backgroundW {
-	background-color: 	white;
+.party {
+	width: 				790px;
+	margin: 			0 auto;
 }
 
-/* cursor becomes a pointer if class = cursorP  */
-.cursorP {
-	cursor: 			pointer;
-}
-
-/* border sets  */
-.border {
-	width: 				350px;
+.weighted {
+	padding: 			20px;
 	border-width: 		3px;
 	border-style: 		solid;
-}
-
-#results {
-	background-color: white;
-	padding-bottom: 50px;
-}
-
-.red {
-	color: red;
+	width: 				790px;
+	cursor: 			pointer;
 }
