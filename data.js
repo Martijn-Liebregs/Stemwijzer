@@ -3708,24 +3708,24 @@ var parties = [{
     size: 0
   },
   {
-    "name": "50Plus",
-    "secular": true,
-    "size": 2
+    name: "50Plus",
+    secular: true,
+    size: 2
   },
   {
-    "name": "Vrijzinnige Partij",
-    "secular": true,
-    "size": 0
+    name: "Vrijzinnige Partij",
+    secular: true,
+    size: 0
   },
   {
-    "name": "Libertarische Partij",
-    "secular": true,
-    "size": 0
+    name: "Libertarische Partij",
+    secular: true,
+    size: 0
   },
   {
-    "name": "Niet Stemmers",
-    "secular": true,
-    "size": 0
+    name: "Niet Stemmers",
+    secular: true,
+    size: 0
   }
 
 ];

@@ -127,7 +127,7 @@ let Stemwijzer = function(){
 	            }
 	        }
 	    }
-		showResults(party_vote_count);
+		showResults();
 	};
 
 	restart.onclick = () => {
@@ -140,7 +140,7 @@ let Stemwijzer = function(){
 	});
 	vote_btn_contra.addEventListener('click', function(){
 		vote('contra');
-	});
+party_vote_count	});
 	vote_btn_none.addEventListener('click', function(){
 		vote('none');
 	});
@@ -230,7 +230,7 @@ let Stemwijzer = function(){
 		weighted_div.style.display = 'block';
 	}
 
-	function showResults(vote_count){
+	function showResults(){
 		// Set display
 		weighted_div.style.display = 'none';
 		done_btn.style.display = 'none';
@@ -241,15 +241,59 @@ let Stemwijzer = function(){
 
 		title_div.innerHTML = 'Uw resultaat:';
 
-		sorted_keys = Object.entries(vote_count).sort((a, b) => b[1] - a[1]).map(el => el[0]);
+		sorted_keys = Object.entries(party_vote_count).sort((a, b) => b[1] - a[1]).map(el => el[0]);
 
 	    let names = Object.values(sorted_keys);
 
-	    for(i = 0; i < Object.keys(sorted_keys).length; i++){
+	    for(let i = 0; i < Object.keys(sorted_keys).length; i++){
 	        let party = document.createElement('h3');
-	        party.innerHTML = (i+1) + '. ' + names[i];
+	        party.innerHTML = names[i];
 	        results_div.appendChild(party);
 	    }
+	}
+
+	function resetResults(){
+
+		let childs = document.getElementsByTagName('h3');
+
+		for(let i = childs.length-1; i >= 0; i-- ){
+			results_div.removeChild(childs[i]);
+		}
+
+	}
+
+	show_secular_parties.onclick = () => {
+
+		resetResults();
+
+		sorted_keys = Object.entries(party_vote_count).sort((a, b) => b[1] - a[1]).map(el => el[0]);
+		let names = Object.values(sorted_keys);
+
+		for(let i = 0; i < Object.keys(sorted_keys).length; i++){
+
+			if (parties[i].secular == true) {
+		        let party = document.createElement('h3');
+		        party.innerHTML = names[i];
+		        results_div.appendChild(party);
+			}
+		}
+	}
+
+	show_big_parties.onclick = () => {
+
+		resetResults();
+
+		sorted_keys = Object.entries(party_vote_count).sort((a, b) => b[1] - a[1]).map(el => el[0]);
+		let names = Object.values(sorted_keys);
+
+		for(let i = 0; i < Object.keys(sorted_keys).length; i++){
+
+			if (parties[i].size > 0) {
+		        let party = document.createElement('h3');
+		        party.innerHTML = names[i];
+		        results_div.appendChild(party);
+			}
+		}
 	}
 
 }();
