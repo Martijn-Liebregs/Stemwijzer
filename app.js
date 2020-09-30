@@ -1,7 +1,7 @@
 let Stemwijzer = function(){
 
 	// Some variables
-	let question = 30;
+	let question = 0;
 	let party_vote_count = {};
 	let votes = [];
 	let weighted_questions = [];
